@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/jafid/Desktop/CS2420/mod3/CS2420-MOD3-TIO-FIFTH_ELEMENT/build",
+  "command": "/usr/bin/clang++  -I/Users/jafid/Desktop/CS2420/mod3/CS2420-MOD3-TIO-FIFTH_ELEMENT/. -g -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -mmacosx-version-min=11.1 -o CMakeFiles/FifthElementTester.dir/FifthElementTester.cpp.o -c /Users/jafid/Desktop/CS2420/mod3/CS2420-MOD3-TIO-FIFTH_ELEMENT/FifthElementTester.cpp",
+  "file": "/Users/jafid/Desktop/CS2420/mod3/CS2420-MOD3-TIO-FIFTH_ELEMENT/FifthElementTester.cpp",
+  "output": "CMakeFiles/FifthElementTester.dir/FifthElementTester.cpp.o"
+}
+]

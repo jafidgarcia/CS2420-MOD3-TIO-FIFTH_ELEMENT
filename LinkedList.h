@@ -1,5 +1,6 @@
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
+#include <ostream>
 
 template<class Type>
 struct Node
@@ -67,7 +68,7 @@ template<class Type>
 void LinkedList<Type>::insert(Type data){
      // Create a new Node object using the 'new' keyword, which dynamically allocates memory.
     // The 'new' keyword returns a pointer to the memory location, so 'temp' is a pointer to a Node.
-    Node<Type> temp = new Node<Type>();
+    Node<Type>* temp = new Node<Type>();
     // Assign the data passed into the function to the 'data' member of the new node.
     temp->data = data;
     
@@ -129,7 +130,7 @@ void LinkedList<Type>::remove(int ndx){
 
     while(currentNodeNum < ndx -1){
         currentNodeNum ++;
-        currentNodeNum = currentNodeNum->next;
+        currentNode = currentNode->next;
     }
     auto toDelete = currentNode->next;
     currentNode->next = toDelete->next;
@@ -144,7 +145,7 @@ template<class Type>
 std::ostream& operator<<(std::ostream& out, const LinkedList<Type>& list){
     auto currentNode = list.front;
     while(currentNode){
-        out << currentnode->data;
+        out << currentNode->data;
         if(currentNode->next){
             out << " ";
         } //end if

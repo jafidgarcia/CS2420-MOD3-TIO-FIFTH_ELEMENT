@@ -1,5 +1,5 @@
 #include "LinkedList.h"
-#include <stdexcept>
+// #include <stdexcept>
 
 template  <class Type>
 class FifthElement : public LinkedList<Type>{
@@ -27,19 +27,37 @@ Type FifthElement<Type>::getFifthElement(){
 
 
 // can use the insert function inherited fromn LinkedList
+//This method inserts a node containing a value between the existing 4 and 5 nodes so that the original 5th node becomes the 6th node in the list. 
+// If there are only 4 nodes in the list, the new node will become the last node in the list.
 template  <class Type>
 void FifthElement<Type>::insertNewFifthElement(const Type &value){
-
+    if(this->count <4){
+        this->insert(value);
+    }
 }
 
+
 // can use the remove function inherited from LinkedList
+//This method deletes the 5th node. If there was a 6th node, 
+// the 4th node now points to the 6th node. If there was no 6th node, the 4th node becomes the new back node.
 template  <class Type>
 void FifthElement<Type>::deleteFifthElement(){
-
+    this->remove(4);
 }
 
 // nothing to inherit , will need to create
 template  <class Type>
 void FifthElement<Type>::swapFourthAndFifthElement(){
+    // create pointer that points to the first element
+    Node<Type>* currElement = this->front;
+
+    // loop currEl to the 4th position
+    for(int i =0; i < 3; i++){
+        currElement = currElement->next;
+    }
+    // creating pointer for 4th element and set it to currElement (4th right now because of loop)
+    Node<Type>* fourthElement = currElement->next;
+    Node<Type>* fifthElement = fourthElement->next;
+
 
 }

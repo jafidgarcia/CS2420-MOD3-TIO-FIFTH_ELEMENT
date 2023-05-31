@@ -24,16 +24,20 @@ Type FifthElement<Type>::getFifthElement(){
 
 }
 
+
+// can use the insert function inherited fromn LinkedList
 template  <class Type>
 void FifthElement<Type>::insertNewFifthElement(const Type &value){
 
 }
 
+// can use the remove function inherited from LinkedList
 template  <class Type>
 void FifthElement<Type>::deleteFifthElement(){
 
 }
 
+// nothing to inherit , will need to create
 template  <class Type>
 void FifthElement<Type>::swapFourthAndFifthElement(){
 
